@@ -27,7 +27,9 @@ client.on('message', msg => {
                 msg.delete({timeout: 10000});
             });
             break;
-
+        case "send":
+            console.log(msg.attachments);
+            break;
         case "help", "?":
             msg.channel.send('list of instructions...').then((message) => {
                 message.delete({timeout: 30000});
